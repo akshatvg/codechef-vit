@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Newsletter</title>
+  <title>Updates</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -52,7 +52,7 @@
             </ul>
           </li>
           <li><a href="/sponsor">Sponsors</a></li>
-          <li class="current"><a href="/contact">Newsletter</a></li>
+          <li class="current"><a href="/contact">Updates</a></li>
         </ul>
       </nav>
     </section>
@@ -64,28 +64,21 @@
         <img src="images/CC_black.png" width=200 height="auto"><br><br>
         Thank You for subscribing! You will receive an E-mail shortly.</center>
     </h3>
-    <div id="fullForm">
       <div id="main" class="wrapper style2">
-        <div class="title">Newsletter</div>
-        <div class="container">
+        <div class="title">Updates</div>
+        <div class="container mt-5 mb-5">
           <center>
             <div class="contact mt-5">
-              <form id="contact-form mt-5">
-                <h3 class="h3 mt-5">Subscribe to our Newsletter! </h3><br /><br />
-                <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" required /><br />
-                <input id="email" name="email" type="email" class="form-control" placeholder="Your Email"
-                  required /><br /><br>
-                <input id="but" type="submit" class="submit form-control" value="Subscribe" />
-              </form>
+                <h4 class="mt-5" style="font-weight: normal">Got the zeal to learn? CodeChef-VIT organises regular webinars on several domains including Competitive Coding, DSA, Web Dev, App Dev, ML, Cloud Computing, etc. Fill this form to be updated about our upcoming webinars and events via emails and text messages.</h4><br /><br />
+                <a href="https://codechef-vit.typeform.com/to/ZoJIV2" target="_blank"><button id="but" type="submit" class="submit form-control" style="width: 200px;cursor: pointer">Stay Updated</button></a>
             </div>
           </center>
         </div>
       </div>
-    </div>
 
 
     <!--Footer-->
-    <div class="footer text-white" style="margin-top:0; background-image: url('images/banner.jpg'); padding:40px">
+    <div class="footer text-white" style="margin-top:7vh; background-image: url('images/banner.jpg'); padding:40px">
       <center>
         <div style="margin: 10px auto; font-size: 100%;">
           &copy; Copyright CodeChef-VIT
@@ -104,6 +97,7 @@
               class="fa fa-linkedin mx-2 fa-lg text-white"></i></a>
           <a href="https://medium.com/codechef-vit" target="_blank"><i
               class="fa fa-medium mx-2 fa-lg text-white"></i></a>
+               <a href="https://github.com/CodeChefVIT" target="_blank"><i class="fa fa-github mx-2 fa-lg text-white"></i></a>
         </div>
       </center>
     </div>
@@ -115,49 +109,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      const emailValid = email => {
-        const pattern = new RegExp(
-          "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
-        );
-        return pattern.test(email);
-      };
-      $("#name").on("focusout", e => {
-        if (e.target.value === "")
-          $("#name")
-            .css({ border: "1px solid red", backgroundColor: "#fff" })
-            .attr("placeholder", "Required");
-        else $("#name").css({ backgroundColor: "white", border: "none" });
-      });
-      $("#email").on("focusout", e => {
-        if (e.target.value === "" || !emailValid(e.target.value))
-          $("#email")
-            .css({ border: "1px solid red", backgroundColor: "#fff" })
-            .attr("placeholder", "Incorrect");
-        else $("#email").css({ border: "none", backgroundColor: "white" });
-      });
-      $("#but").on("click", e => {
-        e.preventDefault();
-        const name = $("#name").val();
-        const email = $("#email").val();
-        if (name !== "" && email !== "" && emailValid(email)) {
-          const data = {
-            name: name,
-            email: email
-          };
-          $.ajax({
-            type: "POST",
-            url: "https://codechefvit-newsletter.herokuapp.com/subscribe",
-            data: data
-          }).done(response => {
-            $("#fullForm").fadeOut();
-            $("#doneDialog")
-              .css({ visibility: "visible" })
-              .fadeIn();
-          });
-        }
-      });
-    </script>
+
 </body>
 
 </html>

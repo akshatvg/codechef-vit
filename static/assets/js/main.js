@@ -23,7 +23,7 @@
 			$('#preloader').fadeOut('slow', function () {
 				$(this).remove();
 			});
-		}, 2400);
+		}, 2000);
 	});
 
 
@@ -39,21 +39,21 @@
 
 	// Title Bar.
 	$(
-			'<div id="titleBar">' +
-			'<a href="#navPanel" class="toggle"></a>' +
-			'<span class="title">' + $('#logo h1').html() + '</span>' +
-			'</div>'
-		)
+		'<div id="titleBar">' +
+		'<a href="#navPanel" class="toggle"></a>' +
+		'<span class="title">' + $('#logo h1').html() + '</span>' +
+		'</div>'
+	)
 		.appendTo($body);
 
 	// Panel.
 	$(
-			'<div id="navPanel">' +
-			'<nav>' +
-			$('#nav').navList() +
-			'</nav>' +
-			'</div>'
-		)
+		'<div id="navPanel">' +
+		'<nav>' +
+		$('#nav').navList() +
+		'</nav>' +
+		'</div>'
+	)
 		.appendTo($body)
 		.panel({
 			delay: 500,
