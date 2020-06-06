@@ -25,7 +25,7 @@ CodeChef-VIT's official website for 2019-20.
 
 The source code of this project is written in **`HTML/CSS/JS, Node.js`**. So, you need to install NPM and Node.js to run this project.
 
-## Instructions
+## Instructions to run
 ```
 $ git clone https://github.com/akshatvg/codechef-vit
 $ cd codechef-vit
