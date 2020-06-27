@@ -80,6 +80,12 @@ app.get('/about', function (req, res) {
   })
 })
 
+app.get('/apps/privacy-policy/interiAR', function (req, res) {
+  res.render('interiAR', {
+    message: ""
+  })
+})
+
 // Error Messages
 
 app.get(function (req, res) {
