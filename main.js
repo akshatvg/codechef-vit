@@ -86,6 +86,12 @@ app.get('/apps/privacy-policy/interiAR', function (req, res) {
   })
 })
 
+app.get('/apps/privacy-policy/bookmarked', function (req, res) {
+  res.render('bookmarked', {
+    message: ""
+  })
+})
+
 // Error Messages
 
 app.get(function (req, res) {
