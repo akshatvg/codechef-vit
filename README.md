@@ -11,12 +11,6 @@
 
 
 
-<p align="center">
-<a href="https://codechefvit19.akshatvg.com">
-<img src="https://github.com/akshatvg/codechef-vit/blob/master/static/images/CC_black.png" alt="CodeChef-VIT Logo"/>
-</a>
-</p>
-
 ![Generic badge](https://img.shields.io/badge/CodeChef-VIT-orange) 
 
 #### Link for [demo](https://codechefvit19.akshatvg.com) 
